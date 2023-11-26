@@ -1,0 +1,25 @@
+Interface:
+    MDBoxLayout:
+        id: topappbar
+        size_hint:None,None
+        size:dp(56),dp(56)
+        pos_hint:{"top":1,"right":1}
+    MDTopAppBar:
+        pos_hint: {"top":1}
+        right_action_items: [["account-circle-outline", lambda x: root.show_menu(x)]]
+
+
+<Header>:
+    adaptive_size: True
+    spacing: dp(12)
+    padding: dp(12)
+    FitImage:
+        source: "man.jpg"
+        size_hint:None,None
+        size: dp(50),dp(50)
+        pos_hint:{"center_y":0.5}
+        radius: dp(25),dp(25),dp(25),dp(25)
+    MDLabel:
+        text: "Umair"
+        pos_hint:{"center_y":0.5}
+        adaptive_size: True

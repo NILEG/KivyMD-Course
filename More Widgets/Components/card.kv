@@ -1,0 +1,28 @@
+Interface:
+    MDBoxLayout:
+        padding: dp(20)
+        MDScrollView:
+            MDGridLayout:
+                id: gridlayout
+                cols: 1
+                adaptive_height: True
+                CardSwipe:
+    MDFloatingActionButton:
+        icon: "plus"
+        on_press: root.create()
+        pos_hint:{"right":1}
+
+<CardSwipe>:
+    size_hint_y:None
+    height: listitem.height
+    MDCardSwipeLayerBox:
+        radius: dp(20)
+        md_bg_color: app.theme_cls.primary_light
+        MDIconButton:
+            icon: "trash-can"
+            on_press: root.delete(root)
+    MDCardSwipeFrontBox:
+        radius: dp(20)
+        OneLineListItem:
+            id: listitem
+            text: "This is a list"

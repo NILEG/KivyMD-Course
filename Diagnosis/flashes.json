@@ -1,0 +1,101 @@
+{
+  "Name": "Flashes",
+  "Questions": [
+    "Are the flashes unilateral or bilateral?",
+    "Did these flashes come on suddenly or gradually?",
+    "Do these flashes occur in transient episodes?",
+    "Are the flashes recurrent?",
+    "Are floaters present?",
+    "Do you have vertigo, limb weakness?",
+    "Are you high myope: Greater than -3.00D?"
+  ],
+  "Are the flashes unilateral or bilateral?": {
+    "Unilateral": [
+      "PVD",
+      "tear",
+      "detach",
+      "migraine"
+    ],
+    "Bilateral": [
+      "PVD",
+      "tear",
+      "detach"
+    ]
+  },
+  "Did these flashes come on suddenly or gradually?": {
+    "Suddenly": [
+      "PVD",
+      "tear",
+      "detach"
+    ],
+    "Gradually": [
+      "PVD",
+      "tear",
+      "detach",
+      "migraine",
+      "tia",
+      "brain disease"
+    ]
+  },
+  "Do these flashes occur in transient episodes?": {
+    "Yes": [
+      "tia",
+      "brain disease",
+      "PVD",
+      "tear",
+      "detach"
+    ],
+    "No": [
+      "PVD",
+      "tear",
+      "detach"
+    ]
+  },
+  "Are the flashes recurrent?": {
+    "Yes": [
+      "migraine",
+      "brain disease"
+    ],
+    "No": [
+      "PVD",
+      "tear",
+      "detach",
+      "tia"
+    ]
+  },
+  "Are floaters present?": {
+    "Yes": [
+      "PVD",
+      "tear",
+      "detach"
+    ],
+    "No": [
+      "migraine",
+      "tia",
+      "brain disease"
+    ]
+  },
+  "Do you have vertigo, limb weakness?": {
+    "Yes": [
+      "tia",
+      "brain disease"
+    ],
+    "No": [
+      "PVD",
+      "tear",
+      "detach"
+    ]
+  },
+  "Are you high myope: Greater than -3.00D?": {
+    "Yes": [
+      "tear",
+      "detach"
+    ],
+    "No": [
+      "PVD",
+      "migraine",
+      "tia",
+      "brain disease"
+    ]
+  }
+}

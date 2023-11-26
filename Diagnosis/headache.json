@@ -1,0 +1,112 @@
+{
+  "Name": "Headache",
+  "Questions": [
+    "Are the headaches unilateral or bilateral?",
+    "Did this headache come on suddenly or gradually?",
+    "Does this occur in transient episodes?",
+    "Are the headaches recurrent?",
+    "Is Vision Loss present?",
+    "Is Vision loss central or shadow-like?",
+    "Do you have Eye pain?"
+  ],
+  "Are the headaches unilateral or bilateral?": {
+    "Unilateral": [
+      "Migraine(Routine)",
+      "Migraine(Advise)",
+      "ON(PSD)",
+      "ON(PU1)",
+      "ON(Acute)"
+    ],
+    "Bilateral": [
+      "Migraine(Routine)",
+      "Migraine(Advise)",
+      "ON(PSD)",
+      "ON(PU1)",
+      "ON(Acute)",
+      "Brain Disease(SD)",
+      "HCD(Routine)",
+      "ETTH(Advise)"
+    ]
+  },
+  "Did this headache come on suddenly or gradually?": {
+    "Suddenly": [
+      "ON(Acute)"
+    ],
+    "Gradually": [
+      "ON(PSD)",
+      "ON(PU1)"
+    ]
+  },
+  "Does this occur in transient episodes?": {
+    "Yes": [
+      "Migraine(Routine)",
+      "Migraine(Advise)",
+      "Brain Disease(SD)"
+    ],
+    "No": [
+      "Migraine(Routine)",
+      "Migraine(Advise)",
+      "ON(PSD)",
+      "ON(PU1)",
+      "ON(Acute)"
+    ]
+  },
+  "Are the headaches recurrent?": {
+    "Yes": [
+      "Migraine(Routine)",
+      "Migraine(Advise)",
+      "Brain Disease(SD)",
+      "HCD(Routine)",
+      "ETTH(Advise)"
+    ],
+    "No": [
+      "ON(PSD)",
+      "ON(PU1)",
+      "ON(Acute)"
+    ]
+  },
+  "Is Vision Loss present?": {
+    "Yes": [
+      "Brain Disease(SD)",
+      "ON(PSD)",
+      "ON(PU1)",
+      "ON(Acute)",
+      "Migraine(Routine)",
+      "Migraine(Advise)"
+    ],
+    "No": [
+      "HCD(Routine)",
+      "ETTH(Advise)"
+    ]
+  },
+  "Is Vision loss central or shadow-like?": {
+    "Central": [
+      "ON(PSD)",
+      "ON(PU1)",
+      "ON(Acute)",
+      "Migraine(Routine)",
+      "Migraine(Advise)"
+    ],
+    "Shadow": [
+      "ON(PSD)",
+      "ON(PU1)",
+      "ON(Acute)",
+      "HCD(Routine)"
+    ]
+  },
+  "Do you have Eye pain?": {
+    "Yes": [
+      "Brain Disease(SD)",
+      "ON(PSD)",
+      "ON(PU1)",
+      "ON(Acute)"
+    ],
+    "No": [
+      "Brain Disease(SD)",
+      "HCD(Routine)",
+      "ETTH(Advise)",
+      "Migraine(Routine)",
+      "Migraine(Advise)"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+DiaInterface:
+    MDRaisedButton:
+        text: "Show"
+        pos_hint: {"center_x":0.5,"center_y":0.5}
+        on_press: root.show_dialog()
+
+<CustomItem>:
+    text: self.my_text
+    IconLeftWidget:
+        icon: root.my_icon
+
+<Content>:
+    orientation: "vertical"
+    size_hint_y:None
+    height: dp(120)
+    spacing: dp(10)
+    MDTextField:
+        id: name
+        hint_text: "Name Here"
+    MDTextField:
+        id: email
+        hint_text: "Email Here"

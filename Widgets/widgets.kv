@@ -1,0 +1,141 @@
+#: import RiseInTransition __main__.RiseInTransition
+
+Interface_3:
+    orientation: "vertical"
+    MDTopAppBar:
+        title: "Curl App"
+        elevation: 0
+        md_bg_color: app.theme_cls.accent_color
+        specific_text_color: app.theme_cls.primary_color
+        left_action_items: [["arrow-left", lambda x: root.back(), "Go Back"]]
+        right_action_items: [["paperclip", lambda x: root.right_action(x)],["calendar-today", lambda x: root.right_action(x)],["dots-vertical", lambda x: root.right_action(x)]]
+    MDBottomNavigation:
+        text_color_active: app.theme_cls.primary_color
+        transition: RiseInTransition
+        MDBottomNavigationItem:
+            name: "Screen 1"
+            text: "News"
+            icon: "newspaper-variant-multiple-outline"
+            Screen_1:
+        MDBottomNavigationItem:
+            name: "Screen 2"
+            text: "Global"
+            icon: "search-web"
+            Screen_2:
+        MDBottomNavigationItem:
+            name: "Screen 3"
+            text: "trending"
+            icon: "chart-bar-stacked"
+            badge_icon: "numeric-10"
+            on_tab_press: self.badge_icon=""
+            Screen_3:
+
+
+<Screen_1>:
+    MDBoxLayout:
+        size_hint: 0.5,0.5
+        pos_hint: {"center_x": 0.5, "center_y":0.5}
+        radius: 25
+        md_bg_color: app.theme_cls.primary_color
+        MDLabel:
+            text: "Screen 1 :)"
+            theme_text_color: "Custom"
+            text_color: app.theme_cls.accent_color
+            halign: "center"
+            font_size: '64sp'
+
+<Screen_2>:
+    MDBoxLayout:
+        size_hint: 0.5,0.5
+        pos_hint: {"center_x": 0.5, "center_y":0.5}
+        radius: 25
+        md_bg_color: app.theme_cls.primary_color
+        MDLabel:
+            text: "Screen 2 :)"
+            theme_text_color: "Custom"
+            text_color: app.theme_cls.accent_color
+            halign: "center"
+            font_size: '64sp'
+<Screen_3>:
+    MDBoxLayout:
+        size_hint: 0.5,0.5
+        pos_hint: {"center_x": 0.5, "center_y":0.5}
+        radius: 25
+        md_bg_color: app.theme_cls.primary_color
+        MDLabel:
+            text: "Screen 3 :)"
+            theme_text_color: "Custom"
+            text_color: app.theme_cls.accent_color
+            halign: "center"
+            font_size: '64sp'
+
+
+
+<Intercae_2>:
+    MDTextField:
+        hint_text:"Email"
+        validator: "email"
+        pos_hint: {"center_x":0.5, "center_y":0.5}
+        size_hint_x:None
+        width: dp(300)
+        helper_text: "Email format is invalid"
+        helper_text_mode: "on_error"
+    MDTextField:
+        hint_text:"Password"
+        max_text_length: 10
+        password: True
+        pos_hint: {"center_x":0.5, "center_y":0.4}
+        size_hint_x:None
+        width: dp(300)
+        helper_text: "Length has exceeded"
+        helper_text_mode: "on_error"
+    CustomTextField:
+        size_hint_x:None
+        width: dp(300)
+        pos_hint: {"center_x":0.5, "center_y":0.3}
+    #MDFloatingActionButtonSpeedDial:
+     #   data: root.data
+      #  hint_animation: True
+       # bg_hint_color: 0,0,0,0
+        #root_button_anim: True
+
+<CustomTextField>:
+    size_hint_y:None
+    height: textfield.height
+    MDTextField:
+        id: textfield
+        hint_text:"Password"
+        max_text_length: 10
+        password: True
+        helper_text: "Length has exceeded"
+        helper_text_mode: "on_error"
+    MDIconButton:
+        pos_hint: {"right":1, "center_y":0.5}
+        icon: "eye-off"
+        on_press:
+            self.icon = "eye" if self.icon=="eye-off" else "eye-off"
+            textfield.password=False if self.icon=="eye" else True
+
+<Interface>:
+    MDIconButton:
+        icon: "abacus"
+        pos_hint: {"center_x":0.5, "center_y": 0.5}
+        icon_size: dp(50)
+        md_bg_color: self.theme_cls.primary_color
+    MDFloatingActionButton:
+        icon: "pencil-outline"
+        pos_hint: {"right": 1, "y":0}
+        type: "small"
+    MDFillRoundFlatIconButton:
+        icon: "apple-ios"
+        text: "IOS"
+        font_size: '32sp'
+        pos_hint: {"center_x":0.5, "center_y": 0.35}
+        icon_color: 0.5,0.3,0.2,1
+    MDRoundFlatIconButton:
+        text: "MDRoundFlatIconButton"
+        icon: "android"
+        text_color: "white"
+        pos_hint: {"center_x":0.5, "center_y": 0.2}
+        disabled: True
+        line_color_disabled: 1,0,0,1

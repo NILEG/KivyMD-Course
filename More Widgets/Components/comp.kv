@@ -1,0 +1,58 @@
+Interface:
+    MDBanner:
+        id: banner
+        type: "two-line-icon"
+        icon: "timericon.png"
+        text: ["Hi! this is Banner", "This is secondary string"]
+        over_widget: scrollview
+        vertical_pad: topappbar.height
+        md_bg_color: 0.8,0.7,0.7,1
+        right_action: ["Close", lambda x: root.close()]
+        left_action: ["Fix it", lambda x: root.close()]
+    MDTopAppBar:
+        id: topappbar
+        title: "App Name"
+        pos_hint: {"top": 1}
+    MDBoxLayout:
+        size_hint_y:None
+        height: Window.height-topappbar.height
+        MDScrollView:
+            do_scroll_y:True
+            id: scrollview
+            MDList:
+                OneLineListItem:
+                    text: "This is a One Line List Item"
+                    on_press: banner.show()
+                ThreeLineListItem:
+                    text: "Main Text"
+                    secondary_text: "Secondary Text"
+                    tertiary_text: "tertiary Text"
+                    on_press: root.print_text(self)
+                TwoLineAvatarListItem:
+                    text: "Main Text"
+                    secondary_text: "Secondary Text"
+                    ImageLeftWidget:
+                        source: "timericon.png"
+                TwoLineAvatarIconListItem:
+                    text: "Main Text"
+                    secondary_text: "Secondary Text"
+                    IconLeftWidget:
+                        icon: "android"
+                    ImageRightWidget:
+                        source: "timericon.png"
+                OneLineAvatarIconListItem:
+                    text: "List item with checkbox"
+                    CustomRightItem:
+
+                TwoLineAvatarIconListItem:
+                    text: "List item with BoxLayout"
+                    secondary_text: "Also with two buttons"
+                    on_size:
+                        self.ids._right_container.width=container.width
+                    CustomRightItem2:
+                        id: container
+                        adaptive_width:True
+                        MDIconButton:
+                            icon: "plus"
+                        MDIconButton:
+                            icon: "minus"
